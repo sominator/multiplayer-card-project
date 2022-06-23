@@ -4,8 +4,8 @@
     "\\client",
     "\\client\\src",
     "\\client\\src\\helpers",
-    "\\client\\webpack"
+    "\\client\\src\\scenes"
   ],
-  "SelectedNode": "\\client\\src\\helpers",
+  "SelectedNode": "\\client\\src\\scenes\\game.js",
   "PreviewInSolutionExplorer": false
 }
