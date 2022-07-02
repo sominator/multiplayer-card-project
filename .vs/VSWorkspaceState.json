@@ -6,6 +6,6 @@
     "\\client\\src\\helpers",
     "\\client\\src\\scenes"
   ],
-  "SelectedNode": "\\client\\src\\scenes\\game.js",
+  "SelectedNode": "\\client\\src\\helpers\\dealer.js",
   "PreviewInSolutionExplorer": false
 }

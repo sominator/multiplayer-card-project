@@ -1,4 +1,4 @@
-import Card from './card'
+import CardGUI from './cardgui'
 
 export default class Dealer {
     constructor(scene) {
@@ -13,10 +13,10 @@ export default class Dealer {
                 opponentSprite = 'cyanCardBack';
             };
             for (let i = 0; i < 5; i++) {
-                let playerCard = new Card(scene);
+                let playerCard = new CardGUI(scene);
                 playerCard.render(475 + (i * 100), 650, playerSprite);
 
-                let opponentCard = new Card(scene);
+                let opponentCard = new CardGUI(scene);
                 scene.opponentCards.push(opponentCard.render(475 + (i * 100), 125, opponentSprite).disableInteractive());
             }
         }

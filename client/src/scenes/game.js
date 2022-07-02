@@ -1,5 +1,5 @@
 import io from 'socket.io-client';
-import Card from '../helpers/card';
+import CardGUI from '../helpers/cardgui';
 import Dealer from "../helpers/dealer";
 import Zone from '../helpers/zone';
 
@@ -49,7 +49,7 @@ export default class Game extends Phaser.Scene {
                 let sprite = gameObject.textureKey;
                 self.opponentCards.shift().destroy();
                 self.dropZone.data.values.cards++;
-                let card = new Card(self);
+                let card = new CardGUI(self);
                 card.render(((self.dropZone.x - 350) + (self.dropZone.data.values.cards * 50)), (self.dropZone.y), sprite).disableInteractive();
             }
         })
