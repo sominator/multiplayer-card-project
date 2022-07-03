@@ -4,8 +4,8 @@ const { cards, joker } = require('./skipbo.js');
 
 module.exports = class Deck {
 	constructor(_jokerCount = 18, _numOfDecks = 12, _deck = { cards, joker }) {
-		var jokers = [],
-		    cards = [];
+		let jokers = [],
+		cards = [];
 		for (let i = 0; i < _jokerCount; i++) {
 			jokers.push(joker);
 		}
@@ -24,7 +24,7 @@ module.exports = class Deck {
 		return this.cards.length;
 	}
 
-	deal(hand, count = 1) {
+	deal(hand, count) {
 		if (!Array.isArray(hand)) throw new Error('Deck: Invalid hand to deal cards, must be an Array');
 		if (count > this.cards.length) {
 			console.log('Not enough cards in the deck to deal');

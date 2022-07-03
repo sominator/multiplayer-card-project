@@ -21,4 +21,9 @@ module.exports = class Card {
 		if (this.rank.shortName === 'SkipBo') return `SkipBo`
 		else return `${this.rank.longName}`;
 	}
+
+	get spritePath() {
+		if (this.rank.shortName === 'SkipBo') return 'cardsb'
+		else return `${this.rank.spritePath}`;
+    }
 }
