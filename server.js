@@ -1,6 +1,11 @@
 const server = require('express')();
 const http = require('http').createServer(server);
-const io = require('socket.io')(http);
+const io = require("socket.io")(http, {
+    cors: {
+        origin: "*",
+        methods: ["GET", "POST"]
+    }
+});
 let players = [];
 
 io.on('connection', function (socket) {
